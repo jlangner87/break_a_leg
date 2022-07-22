@@ -34,7 +34,7 @@ Hosted Site
 
 ## **_Trello Board_**
 
-[Trello](https://trello.com/invite/b/4PqpHSkZ/8c35f8b876eae832e5ee083fb5e78a40/trash2treasure)
+[Trello](https://trello.com/invite/b/4PqpHSkZ/8c35f8b876eae832e5ee083fb5e78a40/full-stack-mern-application)
 
 ---
 
