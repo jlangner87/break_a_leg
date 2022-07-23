@@ -54,11 +54,11 @@ Hosted Site
 
 ### Sample Screenshot
 
-![Component Relationship Diagram](./ComponentDiag.png)
+![Component Hierarchy Diagram](./ComponentDiag.png)
 
 ### Sample Screenshot
 
-![ScreenshotTitle](url)
+![Entity Relationship Diagram](./ERD.png)
 
 ### Sample Screenshot
 
