@@ -52,11 +52,11 @@ Hosted Site
 
 ## **_Screenshots_**
 
-### Sample Screenshot
+### Component Hierarchy Diagram
 
 ![Component Hierarchy Diagram](./ComponentDiag.png)
 
-### Sample Screenshot
+### Entity Relationship Diagram
 
 ![Entity Relationship Diagram](./ERD.png)
 
