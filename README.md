@@ -54,7 +54,7 @@ Hosted Site
 
 ### Sample Screenshot
 
-![ScreenshotTitle](url)
+![Component Relationship Diagram](./ComponentDiag.png)
 
 ### Sample Screenshot
 
@@ -71,4 +71,3 @@ Thing to cite [Title](URL)
 Thing to cite [Title](URL)
 
 ---
-
