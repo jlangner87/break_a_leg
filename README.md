@@ -54,11 +54,11 @@ Hosted Site
 
 ### Component Hierarchy Diagram
 
-![Component Hierarchy Diagram](./ComponentDiag.png)
+![Component Hierarchy Diagram](./OrgCharts/ComponentDiag.png)
 
 ### Entity Relationship Diagram
 
-![Entity Relationship Diagram](./ERD.png)
+![Entity Relationship Diagram](./OrgCharts/ERD.png)
 
 ### Sample Screenshot
 
