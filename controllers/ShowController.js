@@ -9,9 +9,13 @@ const addShow = (req, res) => {
 const updateShow = (req, res) => {
   res.send({})
 }
+const deleteShow = (req, res) => {
+  res.send({})
+}
 
 module.exports = {
   getShow,
   addShow,
-  updateShow
+  updateShow,
+  deleteShow
 }

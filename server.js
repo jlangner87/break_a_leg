@@ -6,6 +6,8 @@ const db = require('./db')
 
 const { Shows } = require('./models')
 const { Volunteers } = require('./models')
+const showController = require('./controllers/ShowController')
+const volController = require('./controllers/VolController')
 
 const app = express()
 
@@ -14,7 +16,6 @@ app.use(express.json())
 app.use(logger('dev'))
 
 app.get('/', (req, res) => {
-  console.log('get operation successful')
   res.send('THIS IS THE ROOT!')
 })
 
@@ -39,6 +40,10 @@ app.get('/volunteers/:name', async (req, res) => {
   const person = await Volunteers.find({ name: name })
   res.json(person)
 })
+
+app.get('/getshows', showController.getShow)
+
+app.get('/getvols', volController.getVol)
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
