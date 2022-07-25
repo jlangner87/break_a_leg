@@ -1,0 +1,23 @@
+{
+  "name": "break_a_leg",
+  "version": "1.0.0",
+  "description": "## Date: 7/25/2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlangner87/break_a_leg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlangner87/break_a_leg/issues"
+  },
+  "homepage": "https://github.com/jlangner87/break_a_leg#readme",
+  "dependencies": {
+    "mongoose": "^6.4.6"
+  }
+}
