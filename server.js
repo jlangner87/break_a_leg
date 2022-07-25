@@ -41,9 +41,9 @@ app.get('/volunteers/:name', async (req, res) => {
   res.json(person)
 })
 
-app.get('/getshows', showController.getShow)
-
-app.get('/getvols', volController.getVol)
+app.post('/shows', (req, res) => {
+  res.send({ message: 'This is the app.post controller...' })
+})
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
