@@ -7,7 +7,7 @@ const volunteersSchema = new Schema(
     headShot: { type: String, required: true },
     city: { type: String, required: true },
     bio: { type: String, required: true },
-    resume: { type: Array, required: true }
+    resume: { type: String }
   },
   { timestamps: true }
 )

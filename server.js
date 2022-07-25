@@ -4,8 +4,8 @@ const logger = require('morgan')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
 
-const { Shows } = require('./models')
-const { Volunteers } = require('./models')
+const { Shows, Volunteers } = require('./models')
+
 const showController = require('./controllers/ShowController')
 const volController = require('./controllers/VolController')
 
@@ -48,3 +48,5 @@ app.post('/shows', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })
+
+app.get('/shows', showController.getShow)
