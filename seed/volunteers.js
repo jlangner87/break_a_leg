@@ -14,15 +14,15 @@ const main = async () => {
       role: 'Dracula',
       city: 'Spencer, IA',
       bio: 'I like dogs',
-      resume: [dracula[0].title]
+      resume: [dracula.title]
     },
     {
       name: 'Marty VanWestin',
       headShot: 'URL',
       role: 'Herbie',
-      city: 'Spencer, IA',
+      city: 'Sheldon, IA',
       bio: 'I like dogs',
-      resume: [gypsy[0].title]
+      resume: [gypsy.title]
     }
   ]
 
