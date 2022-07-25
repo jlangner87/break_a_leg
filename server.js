@@ -18,6 +18,16 @@ app.get('/', (req, res) => {
   res.send('THIS IS THE ROOT!')
 })
 
+app.get('/shows', async (req, res) => {
+  const shows = await Shows.find({})
+  res.json(shows)
+})
+
+app.get('/volunteers', async (req, res) => {
+  const volunteers = await Volunteers.find({})
+  res.json(volunteers)
+})
+
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })
