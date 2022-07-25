@@ -28,15 +28,16 @@ app.get('/volunteers', async (req, res) => {
   res.json(volunteers)
 })
 
-// app.get('/shows/:title', async (req, res) => {
-//   const show = await Shows.findById(shows.title)
-//   res.json(show)
-// })
-
 app.get('/shows/:title', async (req, res) => {
   const { title } = req.params
   const show = await Shows.find({ title: title })
   res.json(show)
+})
+
+app.get('/volunteers/:name', async (req, res) => {
+  const { name } = req.params
+  const person = await Volunteers.find({ name: name })
+  res.json(person)
 })
 
 app.listen(PORT, () => {
