@@ -16,19 +16,21 @@ Hosted Site
 
 ---
 
-### **_Description_**
+## **_Description_**
 
-#### This application connects community theater-goers to the cast and crew of the current production. The theater creates information for each show (Title, production dates, length, and a cast/crew list) and a profile for each member of the show (volunteer photo, name, role, previous roles, and a short blurb from the volunteer).
+### This application connects community theater-goers to the cast and crew of the current production. The theater creates information for each show (Title, production dates, length, and a cast/crew list) and a profile for each member of the show (volunteer photo, name, role, previous roles, and a short blurb from the volunteer).
 
-#### The home page will have a list of this seson's shows. The name and role will be displayed on the show page. When a user clicks on the name, it will open up to a page that displays the rest of the profile information. Under the display, there will be a field where users can enter their name and a short message to the volunteer. When they submit it, the message will be displayed on their profile.
+### The home page will have a list of this seson's shows. The name and role of each volunteer will be displayed on the show's page. When a user clicks on the name, it will open up to a page that displays the rest of the profile information.
 
-#### The two components: Shows & Volunteer
+### The two Mongoose components: Shows & Volunteers
 
 ---
 
-## **Future Development Opportunity**
+## **Future Development Opportunity (Post MVP)**
 
-### To be added during initial development.
+### Under the display of each volunteer's profile, there will be a compiled biography of every role they have had in any show for the theater using the app. Under that will be a field where users can enter their name and a short message to the volunteer. When they submit it, the message will be displayed on their profile.
+
+### The post, update, and delete page for shows and volunteers will be hidden behind an authentication wall, so that the general public cannot alter the data bases.
 
 ---
 
