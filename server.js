@@ -43,13 +43,24 @@ app.get('/volunteers/:name', async (req, res) => {
 })
 
 app.post('/shows', (req, res) => {
-  // res.json('this post request is being called...')
   let show = req.body
   db.collection('shows')
     .insertOne(show)
     .then((result) => {
       res.status(201).json(result)
     })
+})
+app.post('/volunteers', (req, res) => {
+  let show = req.body
+  db.collection('volunteers')
+    .insertOne(show)
+    .then((result) => {
+      res.status(201).json(result)
+    })
+})
+
+app.delete('/shows', (req, res) => {
+  res.send('DELETE request called...')
 })
 
 app.listen(PORT, () => {

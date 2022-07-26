@@ -68,8 +68,8 @@ Hosted Site
 
 #### _Credits & Citations_
 
-Thing to cite [Title](URL)
+.then vs async/await [StackOverflow](https://stackoverflow.com/questions/54495711/async-await-vs-then-which-is-the-best-for-performance)
 
-Thing to cite [Title](URL)
+Additional learning on Express routes [Express](https://expressjs.com/en/starter/basic-routing.html)
 
----
+## Thing to cite [Title](URL)
