@@ -3,6 +3,8 @@ const cors = require('cors')
 const logger = require('morgan')
 const db = require('./db')
 const routes = require('./routes')
+const Shows = require('./models/Shows')
+const Volunteers = require('./models/Volunteers')
 const PORT = process.env.PORT || 3001
 
 const app = express()
@@ -23,7 +25,19 @@ app.get('/shows', (req, res) => {
 })
 
 app.get('/volunteers', (req, res) => {
-  res.json('The shows volunteers exists!')
+  res.json('The volunteers route exists!')
+})
+
+app.get('/shows/:title', async (req, res) => {
+  const { title } = req.params
+  const show = await Shows.find({ title: title })
+  res.json(show)
+})
+
+app.get('/volunteers/:name', async (req, res) => {
+  const { name } = req.params
+  const person = await Volunteers.find({ name: name })
+  res.json(person)
 })
 
 app.listen(PORT, () => {
