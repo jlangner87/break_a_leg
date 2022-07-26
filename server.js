@@ -20,12 +20,14 @@ app.get('/', (req, res) => {
   res.json('This is root!')
 })
 
-app.get('/shows', (req, res) => {
-  res.json('The shows route exists!')
+app.get('/shows', async (req, res) => {
+  const shows = await Shows.find({})
+  res.json(shows)
 })
 
-app.get('/volunteers', (req, res) => {
-  res.json('The volunteers route exists!')
+app.get('/volunteers', async (req, res) => {
+  const people = await Volunteers.find({})
+  res.json(people)
 })
 
 app.get('/shows/:title', async (req, res) => {
@@ -38,6 +40,16 @@ app.get('/volunteers/:name', async (req, res) => {
   const { name } = req.params
   const person = await Volunteers.find({ name: name })
   res.json(person)
+})
+
+app.post('/shows', (req, res) => {
+  res.json('this post request is being called...')
+  // let show = req.body
+  // db.collection('shows')
+  //   .insertMany(show)
+  //   .then((result) => {
+  //     res.status(201).json
+  //   })
 })
 
 app.listen(PORT, () => {
