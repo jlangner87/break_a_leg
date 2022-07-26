@@ -6,7 +6,7 @@ const showsSchema = new Schema(
     poster: { type: String, required: true },
     dates: { type: String, required: true },
     synopsis: { type: String, required: true },
-    castCrew: { type: String }
+    castCrew: { typee: Array }
   },
   { timestamps: true }
 )

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/theaterDatabase') // if we don't have a local database named "productsDatabase" one will be created upon a successful connection
+  .connect('mongodb://127.0.0.1:27017/theaterDatabase')
   .then(() => {
     console.log('Theater Database successfully connected to MongoDB.')
   })

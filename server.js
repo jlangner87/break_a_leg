@@ -6,14 +6,20 @@ const db = require('./db')
 
 const { Shows, Volunteers } = require('./models')
 
+const { Router } = require('express')
 const showController = require('./controllers/ShowController')
 const volController = require('./controllers/VolController')
+const router = Router()
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use(logger('dev'))
+
+app.listen(PORT, () => {
+  console.log(`Express server listening on port ${PORT}`)
+})
 
 app.get('/', (req, res) => {
   res.send('THIS IS THE ROOT!')
@@ -41,12 +47,6 @@ app.get('/volunteers/:name', async (req, res) => {
   res.json(person)
 })
 
-app.post('/shows', (req, res) => {
-  res.send({ message: 'This is the app.post controller...' })
-})
+app.post('/shows/post', showController.addShow)
 
-app.listen(PORT, () => {
-  console.log(`Express server listening on port ${PORT}`)
-})
-
-app.get('/shows', showController.getShow)
+module.exports = router
