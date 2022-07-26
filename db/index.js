@@ -1,7 +1,10 @@
 const mongoose = require('mongoose')
 
 mongoose
-  .connect('mongodb://127.0.0.1:27017/theaterDatabase')
+  .connect('mongodb://127.0.0.1:27017/theaterDatabase', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+  })
   .then(() => {
     console.log('Theater Database successfully connected to MongoDB.')
   })

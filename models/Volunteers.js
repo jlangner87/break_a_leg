@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose')
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const volunteersSchema = new Schema(
   {
@@ -10,4 +11,4 @@ const volunteersSchema = new Schema(
   { timestamps: true }
 )
 
-module.exports = volunteersSchema
+module.exports = mongoose.model('volunteers', volunteersSchema)

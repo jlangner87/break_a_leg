@@ -1,4 +1,5 @@
-const { Schema } = require('mongoose')
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
 const showsSchema = new Schema(
   {
@@ -6,9 +7,9 @@ const showsSchema = new Schema(
     poster: { type: String, required: true },
     dates: { type: String, required: true },
     synopsis: { type: String, required: true },
-    castCrew: { typee: Array }
+    castCrew: { type: Array }
   },
   { timestamps: true }
 )
 
-module.exports = showsSchema
+module.exports = mongoose.model('shows', showsSchema)
