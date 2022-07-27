@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom"
 
-const UpdateShow = (props) => {
+const UpdateVolunteer = (props) => {
   return (
     <div>
-      <input type="text" name= "title" placeholder="enter updated title here"/>
+      <input type="text" name= "name" placeholder="enter updated name here"/>
       <br></br>
       <button className="submit">Submit</button>
     </div>
   )
 }
 
-  export default UpdateShow
+  export default UpdateVolunteer
