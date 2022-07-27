@@ -27,6 +27,13 @@
   font-size: 40px;
 }
 
+.subheading {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-family: 'Poiret One', cursive;
+  font-size: 26px;
+}
+
 .shows_container{
   margin: 0 auto;
   display: inline-flex;
@@ -40,6 +47,8 @@
   width: 150px;
   background-color: #142034;
   margin: 14px 14px 14px 14px;
+  border: 2px solid #b8a11f;
+  border-radius: 5%;
 }
 
 .footer {

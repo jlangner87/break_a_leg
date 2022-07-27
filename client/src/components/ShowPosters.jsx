@@ -3,11 +3,10 @@
 const ShowPosters = (props) => {
   // let navigate = useNavigate()
 
-  // const ShowShow = (shows) => {
-  //   navigate(`view/shows/${shows._id}`)
-  // }
+
   return (
-    <div>This is a show!</div>
+    <div>This is a show!
+    </div>
   )
 }
 

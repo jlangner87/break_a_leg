@@ -4,26 +4,29 @@ import ShowPosters from '../components/ShowPosters'
 
 const Home = () => {
   return (
-    <ul className="shows_container">
-      <li className="show_item">
-        <ShowPosters />
-      </li>
-      <li className="show_item">
-        <ShowPosters />
-      </li>
-      <li className="show_item">
-        <ShowPosters />
-      </li>
-      <li className="show_item">
-        <ShowPosters />
-      </li>
-      <li className="show_item">
-        <ShowPosters />
-      </li>
-      <li className="show_item">
-        <ShowPosters />
-      </li>
-    </ul>
+    <div>
+      <h3 className="subheading">Shows for the 2022 season</h3>
+      <ul className="shows_container">
+        <li className="show_item">
+          <ShowPosters />
+        </li>
+        <li className="show_item">
+          <ShowPosters />
+        </li>
+        <li className="show_item">
+          <ShowPosters />
+        </li>
+        <li className="show_item">
+          <ShowPosters />
+        </li>
+        <li className="show_item">
+          <ShowPosters />
+        </li>
+        <li className="show_item">
+          <ShowPosters />
+        </li>
+      </ul>
+    </div>
   )
 }
 

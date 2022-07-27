@@ -5,9 +5,7 @@ const db = require('./db')
 // const routes = require('./routes')
 const Shows = require('./models/Shows')
 const Volunteers = require('./models/Volunteers')
-const { isObjectIdOrHexString } = require('mongoose')
 const PORT = process.env.PORT || 3001
-const ObjectId = require('mongodb').ObjectId()
 
 const app = express()
 
@@ -39,24 +37,21 @@ app.get('/shows', async (req, res) => {
   res.json(shows)
 })
 
-app.get('/shows/:title', async (req, res) => {
+app.get('/shows/:', async (req, res) => {
   const { title } = req.params
   const show = await Shows.find({ title: title })
   res.json(show)
 })
 
 // UPDATE
-// app.patch('/shows/:id', (req, res) => {
-//   const updatedShow = req.bodydb
-//   db.collection('shows')
-//     .updateOne({ _id: ObjectId(req.params.id) }, { $set: updatedShow })
-//     .then((result) => {
-//       res.status(201).json(result)
-//     })
-// })
 
-// This is what I am workin off of...
-//https://mongoosejs.com/docs/schematypes.html
+app.put('/shows/:id', async (req, res) => {
+  const { ObjectId } = req.params
+  const updated = req.body
+  db.collection('shows')
+  await Shows.updateOne({ ObjectId })
+  res.status(201).json(updated)
+})
 
 //DELETE
 app.delete('/shows', (req, res) => {
@@ -89,7 +84,15 @@ app.get('/volunteers/:name', async (req, res) => {
   const person = await Volunteers.find({ name: name })
   res.json(person)
 })
+
 //UPDATE
+app.put('/volunteers/:id', async (req, res) => {
+  const { ObjectId } = req.params
+  const updated = req.body
+  db.collection('volunteers')
+  await Volunteers.replaceOne({ _id: ObjectId })
+  res.json(updated)
+})
 
 //DELETE
 app.delete('/volunteers', (req, res) => {

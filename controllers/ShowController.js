@@ -1,16 +1,10 @@
-const Show = require('../models/Shows')
+// const Shows = require('../models/Shows')
 
-const updateShow = async (req, res) => {
-  try {
-    const show = await Show.findByIdAndUpdate(req.params.id, req.body, {
-      new: true
-    })
-    res.status(200).json(show)
-  } catch (error) {
-    return res.status(500).send(error.message)
-  }
-}
+// const updateShow = async () => {
+//   const updated = await Shows.updateOne()
+//   res.status(201).json(updated)
+// }
 
-module.exports = {
-  updateShow
-}
+// module.exports = {
+//   updateShow
+// }
