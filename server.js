@@ -62,7 +62,14 @@ app.delete('/shows', (req, res) => {
 
 //Volunteer Operations
 //CREATE
-
+app.post('/volunteers', (req, res) => {
+  let person = req.body
+  db.collection('volunteers')
+    .insertOne(person)
+    .then((result) => {
+      res.status(201).json(result)
+    })
+})
 //READ
 app.get('/volunteers', async (req, res) => {
   const people = await Volunteers.find({})
@@ -77,6 +84,14 @@ app.get('/volunteers/:name', async (req, res) => {
 //UPDATE
 
 //DELETE
+app.delete('/volunteers', (req, res) => {
+  let person = req.body
+  db.collection('volunteers')
+    .deleteOne(person)
+    .then((result) => {
+      res.status(201).json(result)
+    })
+})
 
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
