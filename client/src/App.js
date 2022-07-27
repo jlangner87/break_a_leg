@@ -6,6 +6,7 @@ import NavBar from './components/NavBar'
 import Admin from './components/Admin'
 import AdminHome from './pages/AdminHome'
 import Shows from './pages/Shows'
+import Volunteers from './pages/Volunteers'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/shows" element={<Shows />} />
+        <Route path="/volunteers" element={<Volunteers />} />
       </Routes>
       <Admin />
     </div>
