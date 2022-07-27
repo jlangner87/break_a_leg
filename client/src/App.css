@@ -19,6 +19,12 @@
   background-color: #142034;
 }
 
+a {
+  color: #b8a11f;
+  text-decoration: none;
+  margin-left: 12px;
+  margin-right: 12px;
+}
 
 .theater_name {
   font-family: 'Montserrat', sans-serif;

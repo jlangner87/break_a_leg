@@ -5,7 +5,7 @@ const Admin = () => {
   return (
     <nav className="footer">
       <div>
-        <Link to='/admin'>Admin Login</Link>
+        <Link to='/admin' className="links">Admin Login</Link>
       </div>
     </nav>
   )

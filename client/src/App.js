@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import Admin from './components/Admin'
 import AdminHome from './pages/AdminHome'
+import Shows from './pages/Shows'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminHome />} />
+        <Route path="/shows" element={<Shows />} />
       </Routes>
       <Admin />
     </div>

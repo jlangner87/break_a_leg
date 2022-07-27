@@ -24,6 +24,7 @@ const Home = () => {
           <ShowPosters />
         </li>
       </ul>
+      <h3 className="subheading">Meet the volunteers who make it possible</h3>
     </div>
   )
 }

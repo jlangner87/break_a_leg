@@ -1,7 +1,7 @@
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const ShowPosters = (props) => {
-  // let navigate = useNavigate()
+  let navigate = useNavigate()
 
 
   return (
