@@ -1,38 +1,59 @@
+*{
+  font-size: 18px;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 24px;
+  color: #b8a11f;
+  font-size: 12px;
+  text-align: end;
+  background-color: #142034;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.theater_name {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-family: 'Poiret One', cursive;
+  font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.shows_container{
+  margin: 0 auto;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-self: center;
 }
 
-.App-link {
-  color: #61dafb;
+.show_item {
+  list-style: none;
+  height: 250px;
+  width: 150px;
+  background-color: #142034;
+  margin: 14px 14px 14px 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24px;
+  background-color: #142034;
+  color: #b8a11f;
+  font-size: 12px;
+  text-align: end;
 }
+
+/* other colors
+navy #203252
+gold #b8a11f
+pink #fae8e3
+gray #8190a6
+*/
