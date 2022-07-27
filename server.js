@@ -5,7 +5,9 @@ const db = require('./db')
 // const routes = require('./routes')
 const Shows = require('./models/Shows')
 const Volunteers = require('./models/Volunteers')
+const { isObjectIdOrHexString } = require('mongoose')
 const PORT = process.env.PORT || 3001
+const ObjectId = require('mongodb').ObjectId()
 
 const app = express()
 
@@ -44,11 +46,17 @@ app.get('/shows/:title', async (req, res) => {
 })
 
 // UPDATE
-app.put('/shows/:id', async (req, res) => {
-  const { id } = req.params
-  const show = await Shows.updateOne({ _id: id }, { upsert: true })
-  res.json({ message: 'this path is also working' })
+app.patch('/shows/:id', (req, res) => {
+  const updatedShow = req.bodydb
+  db.collection('shows')
+    .updateOne({ _id: ObjectId(req.params.id) }, { $set: updatedShow })
+    .then((result) => {
+      res.status(201).json(result)
+    })
 })
+
+// This is what I am workin off of...
+//https://mongoosejs.com/docs/schematypes.html
 
 //DELETE
 app.delete('/shows', (req, res) => {
