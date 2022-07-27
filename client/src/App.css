@@ -62,6 +62,11 @@
   text-align: end;
 }
 
+.submit {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
 /* other colors
 navy #203252
 gold #b8a11f
