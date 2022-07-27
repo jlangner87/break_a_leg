@@ -45,12 +45,11 @@ app.get('/shows/:', async (req, res) => {
 
 // UPDATE
 
-app.put('/shows/:id', async (req, res) => {
+app.patch('/shows/:id', async (req, res) => {
   const { ObjectId } = req.params
   const updated = req.body
-  db.collection('shows')
-  await Shows.updateOne({ ObjectId })
-  res.status(201).json(updated)
+  await Shows.updateOne({ ObjectId: updated })
+  res.json(updated)
 })
 
 //DELETE
