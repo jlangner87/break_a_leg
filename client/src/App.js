@@ -7,6 +7,7 @@ import Admin from './components/Admin'
 import AdminHome from './pages/AdminHome'
 import Shows from './pages/Shows'
 import Volunteers from './pages/Volunteers'
+import ShowPosters from './components/ShowPosters'
 
 function App() {
   return (
