@@ -46,14 +46,14 @@ app.get('/shows/:title', async (req, res) => {
 })
 
 // UPDATE
-app.patch('/shows/:id', (req, res) => {
-  const updatedShow = req.bodydb
-  db.collection('shows')
-    .updateOne({ _id: ObjectId(req.params.id) }, { $set: updatedShow })
-    .then((result) => {
-      res.status(201).json(result)
-    })
-})
+// app.patch('/shows/:id', (req, res) => {
+//   const updatedShow = req.bodydb
+//   db.collection('shows')
+//     .updateOne({ _id: ObjectId(req.params.id) }, { $set: updatedShow })
+//     .then((result) => {
+//       res.status(201).json(result)
+//     })
+// })
 
 // This is what I am workin off of...
 //https://mongoosejs.com/docs/schematypes.html
