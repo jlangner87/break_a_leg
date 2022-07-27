@@ -44,6 +44,11 @@ app.get('/shows/:title', async (req, res) => {
 })
 
 // UPDATE
+app.put('/shows/:id', async (req, res) => {
+  const { id } = req.params
+  const show = await Shows.updateOne({ _id: id }, { upsert: true })
+  res.json({ message: 'this path is also working' })
+})
 
 //DELETE
 app.delete('/shows', (req, res) => {
