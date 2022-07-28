@@ -62,14 +62,26 @@ Hosted Site
 
 ![Entity Relationship Diagram](./OrgCharts/ERD.png)
 
-### Sample Screenshot
+### Home Page
 
----
+![Home Page](./screenshots/home.png)
+
+### Volunteer Page
+
+![Forms Page](./screenshots/volunteer.png)
+
+### Admin Forms Page
+
+## ![Forms Page](./screenshots/forms.png)
 
 #### _Credits & Citations_
 
-.then vs async/await [StackOverflow](https://stackoverflow.com/questions/54495711/async-await-vs-then-which-is-the-best-for-performance)
+### .then vs async/await [StackOverflow](https://stackoverflow.com/questions/54495711/async-await-vs-then-which-is-the-best-for-performance)
 
-Additional learning on Express routes [Express](https://expressjs.com/en/starter/basic-routing.html)
+### Additional learning on Express routes [Express](https://expressjs.com/en/starter/basic-routing.html)
 
-## Thing to cite [Title](URL)
+### eadshot images [JCPenney](https://jcpportraits.com/business-headshot/)
+
+### Thing to cite [Title](URL)
+
+### Thing to cite [Title](URL)

@@ -1,7 +1,7 @@
 const Volunteers = (props) => {
   return (
     <div>
-      <p> Is this route still active???</p>
+      <p className="subheading">Meet the volunteers</p>
       {props.people.map((person) => (
         <div className="shows_page_container" key={person.id}>
           <div className="shows_large">

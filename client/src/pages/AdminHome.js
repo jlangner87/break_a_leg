@@ -7,6 +7,7 @@ import DeleteVolunteer from '../components/DeleteVolunteer'
 const AdminHome = () => {
   return (
     <div>
+      <h2 className="admin_title">Admin Submission Forms</h2>
       <div className="form_container">
         <div className="admin_form">
           <h3 className="subheading">Add a volunteer</h3>
