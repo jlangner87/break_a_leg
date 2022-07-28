@@ -27,7 +27,6 @@ const App = () => {
     <div className="App">
       <NavBar />
       <h2 className="theater_name">Sometown Community Theater</h2>
-
       <Routes>
         <Route path="/" element={<Home shows={shows} />} />
         <Route path="/admin" element={<AdminHome />} />

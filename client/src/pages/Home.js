@@ -1,6 +1,3 @@
-// import { BASE_URL } from '../globals'
-// import axios from 'axios'
-import { useState, useEffect } from 'react'
 import ShowPosters from '../components/ShowPosters'
 
 const Home = (props) => {
