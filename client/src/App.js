@@ -12,13 +12,19 @@ import Volunteers from './pages/Volunteers'
 
 const App = () => {
   const [shows, setShows] = useState({})
-  // console.log(shows)
-
   useEffect(() => {
     async function getDetails() {
       const res = await axios.get(`${BASE_URL}shows`)
       setShows(res.data)
-      console.log(res.data)
+    }
+    getDetails()
+  }, [])
+
+  const [people, setPeople] = useState({})
+  useEffect(() => {
+    async function getDetails() {
+      const res = await axios.get(`${BASE_URL}volunteers`)
+      setPeople(res.data)
     }
     getDetails()
   }, [])
@@ -31,7 +37,7 @@ const App = () => {
         <Route path="/" element={<Home shows={shows} />} />
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/shows" element={<Shows shows={shows} />} />
-        <Route path="/volunteers" element={<Volunteers />} />
+        <Route path="/volunteers" element={<Volunteers people={people} />} />
       </Routes>
 
       <Admin />

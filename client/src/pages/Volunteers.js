@@ -1,9 +1,20 @@
-import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import ShowPosters from '../components/ShowPosters'
-
 const Volunteers = (props) => {
-  return <div className="subheading"> The volunteer page is working</div>
+  return (
+    <div>
+      <p> Is this route still active???</p>
+      {props.people.map((person) => (
+        <div className="shows_page_container" key={person.id}>
+          <div className="shows_large">
+            <h3 className="vol_name">{person.name}</h3>
+            <h5 className="role">{person.city}</h5>
+            <img className="headshot" src={person.headshot} />
+            <h5 className="role">{person.role}</h5>
+            <h5 className="synopsis">" {person.quote} "</h5>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 }
 
 export default Volunteers
