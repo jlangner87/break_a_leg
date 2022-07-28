@@ -11,16 +11,6 @@ import Volunteers from './pages/Volunteers'
 import ShowPosters from './components/ShowPosters'
 
 const App = () => {
-  const [shows, setShows] = useState([])
-  const [selectedShow, setSelectedShow] = useState(null)
-  useEffect(() => {
-    async function getShows() {
-      const result = await axios.get(`$ http://localhost:3001/shows/`)
-      setShows(result.data.results)
-    }
-    getShows()
-  }, [])
-
   return (
     <div className="App">
       <NavBar />

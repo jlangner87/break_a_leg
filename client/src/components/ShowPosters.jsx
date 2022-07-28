@@ -1,17 +1,27 @@
-const ShowPosters = (props) => { 
+import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
 
-return (
-  <div className="shows_container">THIS IS PASSING TO HOME
-    {/* {
-      props.shows.map((shows) => (
-        <div key={shows.id} className="show_item">
-          <h3 className="subheading">{shows.title}</h3>
+const ShowPosters = () => { 
 
-        </div>
-      ))
-    } */}
+  useEffect(() => {
+    axios.get(` http://localhost:3001/shows`)
+    .then(response => ShowPosters(response.data.total))
+  }, [])
+
+
+
+
+
+  return (
+
+  <div className="shows_container">
+    <h3>Route from ShowPosters to Home is working</h3>
+
   </div>
-  )}
+ 
+)}
 
 
 
