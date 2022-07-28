@@ -1,25 +1,20 @@
-import { Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import axios from 'axios'
-import { BASE_URL } from '../globals'
-
-const ShowPosters = () => { 
-
-  useEffect(() => {
-    async function getDetails() {
-      const res = await axios.get(`${BASE_URL}shows`)
-      console.log(res)
-    }
-    getDetails()
-  }, [])
+const ShowPosters = (props) => { 
+  console.log(props)
   return (
-
-  <div className="shows_container">
-    <h3>Route from ShowPosters to Home is working</h3>
-
-  </div>
- 
-)}
+    <div className="shows_container">
+    {
+      props.shows.map((show) => (
+        <div key={show.id} className="show_item">
+          <h3>{show.title}</h3>
+          <img className="home_poster" src={show.poster}/>
+          <h5 className="home_dates">{show.dates}</h5>
+        </div>
+      ))
+    }
+   </div>
+  )
+  
+}
 
 
 

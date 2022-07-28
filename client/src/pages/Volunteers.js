@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import ShowPosters from '../components/ShowPosters'
 
 const Volunteers = (props) => {
-  return <div className="subheading"> This page is working</div>
+  return <div className="subheading"> The volunteer page is working</div>
 }
 
 export default Volunteers

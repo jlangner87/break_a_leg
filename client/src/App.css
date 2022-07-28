@@ -56,6 +56,14 @@ a {
   border: 2px solid #b8a11f;
   border-radius: 5%;
 }
+  .home_poster{
+    height: 200px;
+    width: 143px
+  }
+
+  .home_dates{
+    font-size: 16px;
+  }
 
 .footer {
   position: relative;
