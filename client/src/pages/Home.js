@@ -8,21 +8,6 @@ const Home = () => {
         <li className="show_item">
           <ShowPosters />
         </li>
-        <li className="show_item">
-          <ShowPosters />
-        </li>
-        <li className="show_item">
-          <ShowPosters />
-        </li>
-        <li className="show_item">
-          <ShowPosters />
-        </li>
-        <li className="show_item">
-          <ShowPosters />
-        </li>
-        <li className="show_item">
-          <ShowPosters />
-        </li>
       </ul>
       <h3 className="subheading">Meet the volunteers who make it possible</h3>
     </div>

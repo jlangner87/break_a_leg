@@ -1,6 +1,7 @@
 import './App.css'
-import React, { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import Admin from './components/Admin'
@@ -10,6 +11,21 @@ import Volunteers from './pages/Volunteers'
 import ShowPosters from './components/ShowPosters'
 
 function App() {
+  const GetShows = () => {
+    const [shows, setShows] = useState([])
+    useEffect(() => {
+      const listShows = async () => {
+        try {
+          let result = await axios.get('http://localhost:3001/shows')
+          listShows(result.data)
+        } catch (error) {
+          console.log(error)
+        }
+      }
+      listShows()
+    }, [])
+  }
+
   return (
     <div className="App">
       <NavBar />
