@@ -16,9 +16,6 @@ const ShowPosters = (props) => {
   
 }
 
-
-
-
 export default ShowPosters
 
 

@@ -65,6 +65,28 @@ a {
     font-size: 16px;
   }
 
+  .shows_page_container {
+    margin: 0 auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-self: center;
+  }
+
+  .shows_large {
+  list-style: none;
+  height: 700px;
+  width: 500px;
+  background-color: #142034;
+  margin: 14px 14px 14px 14px;
+  border: 2px solid #b8a11f;
+  border-radius: 5%;
+  }
+
+  .shows_poster {
+  height: 200px;
+  width: 143px
+  }
+
 .footer {
   position: relative;
   bottom: 0;
