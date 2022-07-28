@@ -6,14 +6,12 @@ import { BASE_URL } from '../globals'
 const ShowPosters = () => { 
 
   useEffect(() => {
-    axios.get(` http://localhost:3001/shows`)
-    .then(response => ShowPosters(response.data.total))
+    async function getDetails() {
+      const res = await axios.get(`${BASE_URL}shows`)
+      console.log(res)
+    }
+    getDetails()
   }, [])
-
-
-
-
-
   return (
 
   <div className="shows_container">
