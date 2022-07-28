@@ -10,32 +10,29 @@ import Shows from './pages/Shows'
 import Volunteers from './pages/Volunteers'
 import ShowPosters from './components/ShowPosters'
 
-function App() {
-  const GetShows = () => {
-    const [shows, setShows] = useState([])
-    useEffect(() => {
-      const listShows = async () => {
-        try {
-          let result = await axios.get('http://localhost:3001/shows')
-          listShows(result.data)
-        } catch (error) {
-          console.log(error)
-        }
-      }
-      listShows()
-    }, [])
-  }
+const App = () => {
+  const [shows, setShows] = useState([])
+  const [selectedShow, setSelectedShow] = useState(null)
+  useEffect(() => {
+    async function getShows() {
+      const result = await axios.get(`$ http://localhost:3001/shows/`)
+      setShows(result.data.results)
+    }
+    getShows()
+  }, [])
 
   return (
     <div className="App">
       <NavBar />
       <h2 className="theater_name">Sometown Community Theater</h2>
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<AdminHome />} />
         <Route path="/shows" element={<Shows />} />
         <Route path="/volunteers" element={<Volunteers />} />
       </Routes>
+
       <Admin />
     </div>
   )

@@ -1,10 +1,15 @@
 const ShowPosters = (props) => { 
 
 return (
-  <div>
-  <p className='subheading'>Show Title Here</p>
-  <p>photo here</p>
-  <p>dates here</p>
+  <div className="shows_container">THIS IS PASSING TO HOME
+    {/* {
+      props.shows.map((shows) => (
+        <div key={shows.id} className="show_item">
+          <h3 className="subheading">{shows.title}</h3>
+
+        </div>
+      ))
+    } */}
   </div>
   )}
 
