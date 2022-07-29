@@ -53,7 +53,7 @@ app.patch('/shows/:id', async (req, res) => {
 })
 
 //DELETE
-app.delete('/shows', (req, res) => {
+app.delete('/shows/:title', (req, res) => {
   let show = req.body
   db.collection('shows')
     .deleteOne(show)
@@ -94,7 +94,7 @@ app.put('/volunteers/:id', async (req, res) => {
 })
 
 //DELETE
-app.delete('/volunteers', (req, res) => {
+app.delete('/volunteers/:id', (req, res) => {
   let person = req.body
   db.collection('volunteers')
     .deleteOne(person)
