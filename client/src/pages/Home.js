@@ -3,7 +3,7 @@ import ShowPosters from '../components/ShowPosters'
 const Home = (props) => {
   return (
     <div>
-      <h3 className="subheading">Upcoming shows for our 75th season</h3>
+      <h3 className="subheading">Now presenting our 75th Season</h3>
       <ShowPosters shows={props.shows} />
     </div>
   )
