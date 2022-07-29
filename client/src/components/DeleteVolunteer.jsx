@@ -1,5 +1,3 @@
-import { useNavigate } from "react-router-dom"
-
 const DeleteVolunteer = (props) => {
   return (
     <div>

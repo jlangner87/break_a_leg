@@ -1,5 +1,4 @@
 const ShowPosters = (props) => { 
-  console.log(props)
   return (
     <div className="shows_container">
     {

@@ -1,5 +1,3 @@
-import React, { UseState } from "react"
-
 const UpdateShow = (props) => {
   return (
     <form>

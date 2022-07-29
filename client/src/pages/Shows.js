@@ -1,6 +1,7 @@
 const Shows = (props) => {
   return (
     <div>
+      <p className="subheading">All past and current shows</p>
       {props.shows.map((show) => (
         <div className="shows_page_container" key={show.id}>
           <div className="shows_large">
