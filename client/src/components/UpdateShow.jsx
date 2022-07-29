@@ -18,7 +18,7 @@ const UpdateShow = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.put(`${BASE_URL}shows`, formState)
+    let res = await axios.patch(`${BASE_URL}shows`, formState)
     console.log(res)
     setFormState(initialState)
   }
