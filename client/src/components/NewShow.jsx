@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import axios from 'axios'
+import { BASE_URL } from '../globals';
 
 const NewShowForm = (props) => {
 
-  const [newShows, setNewShows] = useState([])
   const initialState = {
     title: '',
     dates: '',
@@ -15,9 +16,10 @@ const NewShowForm = (props) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    console.log(formState)
+    let res = await axios.post(`${BASE_URL}shows`, formState)
+    console.log(res)
     setFormState(initialState)
   }
   return (

@@ -1,11 +1,36 @@
+import React, { useState } from 'react';
+import axios from 'axios'
+import { BASE_URL } from '../globals'
+
 const NewVolunteerForm = (props) => {
+
+  const initialState = {
+    name: '',
+    role: '',
+    city: '',
+    quote: '',
+    headshot: '',
+  }
+  const [formState, setFormState] = useState(initialState)
+
+  const handleChange = event => {
+    setFormState({ ...formState, [event.target.id]: event.target.value })
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    let res = await axios.post(`${BASE_URL}volunteers`, formState)
+    console.log(res)
+    setFormState(initialState)
+  }
+
   return (
-    <form>
-      <input className="form_block" type="text" name= "name" placeholder="full name here"/>
-      <input className="form_block" type="text" name= "role" placeholder="role here"/>
-      <input className="form_block" type="text" name= "city" placeholder="city here"/>
-      <input className="form_block" type="text" name= "quote" placeholder="quote here"/>
-      <input className="form_block" type="text" name= "headshot" placeholder="headshot URL here"/>
+    <form onSubmit={handleSubmit}>
+      <input id='name' onChange={handleChange} value={formState.title} className="form_block" type="text" placeholder="full name here"/>
+      <input id='role' onChange={handleChange} value={formState.title} className="form_block" type="text" placeholder="role here"/>
+      <input id='city' onChange={handleChange} value={formState.title} className="form_block" type="text" placeholder="city here"/>
+      <input id='quote' onChange={handleChange} value={formState.title} className="form_block" type="text" placeholder="quote here"/>
+      <input id='headshot' onChange={handleChange} value={formState.title} className="form_block" type="text" placeholder="headshot URL here"/>
       <br></br>
       <button className="submit">Submit</button>
       </form>
