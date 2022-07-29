@@ -12,7 +12,7 @@
 
 ---
 
-Hosted Site
+### Hosted Site [Heroku] (https://damp-dusk-88587.herokuapp.com/)
 
 ---
 
@@ -21,20 +21,6 @@ Hosted Site
 ### This application connects community theater-goers to the cast and crew of the current production. Theater admin can easily create, update, and delete show and volunteer profiles for the public to read.
 
 ### The two Mongoose components: Shows & Volunteers
-
----
-
-## **Future Development Opportunity (Post MVP)**
-
-### Each show will compile a list of volunteers associated with that show. The list will be a clickable link that routes the user to the volunteer's profile
-
-### Under the display of each volunteer's profile, there will be a compiled biography of every role they have had in any show for the theater using the app. Under that will be a field where users can enter their name and a short message to the volunteer. When they submit it, the message will be displayed on their profile.
-
-### Shows will be categorized by a "season" key value in the object. The "Shows" page will then be a list of seasons that users can navigate to.
-
-### The post, update, and delete page for shows and volunteers will be hidden behind an authentication wall, so that the general public cannot alter the data bases.
-
----
 
 ## **_Trello Board_**
 
@@ -67,6 +53,26 @@ Hosted Site
 ### Admin Forms Page
 
 ## ![Forms Page](./screenshots/forms.png)
+
+---
+
+## **Future Development Opportunity (Post MVP)**
+
+### Each show will compile a list of volunteers associated with that show. The list will be a clickable link that routes the user to the volunteer's profile
+
+### Under the display of each volunteer's profile, there will be a compiled biography of every role they have had in any show for the theater using the app. Under that will be a field where users can enter their name and a short message to the volunteer. When they submit it, the message will be displayed on their profile.
+
+### Shows will be categorized by a "season" key value in the object. The "Shows" page will then be a list of seasons that users can navigate to.
+
+### The post, update, and delete page for shows and volunteers will be hidden behind an authentication wall, so that the general public cannot alter the data bases.
+
+## **Known Bugs**
+
+### Put request inserts an empty object with a new object ID.
+
+### When adding a new object, the server displays a blank page with an error that states .map is not a function.
+
+---
 
 #### _Credits & Citations_
 
