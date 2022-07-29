@@ -163,3 +163,18 @@ a {
 .form_block {
   margin: 4px;
 }
+
+.hidden_id {
+  font-size: 18px;
+  text-align: justify;
+  margin: 20px 20px 20px 20px;
+  color: #142034
+}
+
+.hidden_id:hover {
+  color: #b8a11f;
+}
+
+.admin_note {
+  font-size: 14px;
+}

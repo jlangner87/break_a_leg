@@ -9,6 +9,7 @@ const Shows = (props) => {
             <img className="shows_poster" src={show.poster} />
             <h5 className="shows_dates">{show.dates}</h5>
             <h5 className="synopsis">{show.synopsis}</h5>
+            <h5 className="hidden_id">{show._id}</h5>
           </div>
         </div>
       ))}

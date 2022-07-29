@@ -5,6 +5,7 @@ import { BASE_URL } from '../globals';
 const UpdateShow = (props) => {
 
   const initialState = {
+    _id: '',
     title: '',
     dates: '',
     synopsis: '',
@@ -18,12 +19,13 @@ const UpdateShow = (props) => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    let res = await axios.patch(`${BASE_URL}shows`, formState)
+    let res = await axios.put(`${BASE_URL}shows/id`, formState)
     console.log(res)
     setFormState(initialState)
   }
   return (
     <form onSubmit={handleSubmit} className='form_align'>
+      <input id='_id' onChange={handleChange} value={formState._id} className="form_block" type="text" placeholder="show ID here"/>
       <input id='title' onChange={handleChange} value={formState.title} className="form_block" type="text" placeholder="title here"/>
       <input id='dates' onChange={handleChange} value={formState.dates} className="form_block" type="text" placeholder="dates here"/> 
       <input id='synopsis' onChange={handleChange} value={formState.synopsis} className="form_block" type="text" placeholder="synopsis here"/>

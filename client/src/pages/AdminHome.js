@@ -16,6 +16,9 @@ const AdminHome = () => {
         <div className="admin_form">
           <h3 className="subheading">Update a show</h3>
           <UpdateShow />
+          <p className="admin_note">
+            Show ID is hidden: Hover under synopsis to reveal
+          </p>
         </div>
         <div className="admin_form">
           <h3 className="subheading">Add a volunteer</h3>
@@ -24,11 +27,17 @@ const AdminHome = () => {
         <div className="admin_form">
           <h3 className="subheading">Update a volunteer</h3>
           <UpdateVolunteer />
+          <p className="admin_note">
+            Volunteer ID is hidden: Hover under quote to reveal
+          </p>
         </div>
 
         <div className="admin_form">
           <h3 className="subheading">Delete a volunteer</h3>
           <DeleteVolunteer />
+          <p className="admin_note">
+            Volunteer ID is hidden: Hover under quote to reveal
+          </p>
         </div>
       </div>
     </div>

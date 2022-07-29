@@ -10,6 +10,7 @@ const Volunteers = (props) => {
             <img className="headshot" src={person.headshot} />
             <h5 className="role">{person.role}</h5>
             <h5 className="synopsis">" {person.quote} "</h5>
+            <p className="hidden_id">" {person._id} "</p>
           </div>
         </div>
       ))}
