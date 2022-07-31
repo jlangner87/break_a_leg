@@ -1,8 +1,9 @@
-const ShowPosters = (props) => { 
+const ShowPosters = (props) => {
+  let showArr = [props.shows] 
   return (
     <div className="shows_container">
     {
-      props.shows.map((show) => (
+      showArr.map((show) => (
         <div key={show.id} className="show_item">
           <h3>{show.title}</h3>
           <img className="home_poster" src={show.poster}/>

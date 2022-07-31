@@ -1,8 +1,9 @@
 const Shows = (props) => {
+  let showArr = [props.shows]
   return (
     <div>
       <p className="subheading">All past and current shows</p>
-      {props.shows.map((show) => (
+      {showArr.map((show) => (
         <div className="shows_page_container" key={show.id}>
           <div className="shows_large">
             <h3 className="subheading">{show.title}</h3>
