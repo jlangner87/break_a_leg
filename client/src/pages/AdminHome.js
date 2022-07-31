@@ -7,7 +7,7 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
 
-const AdminHome = (props) => {
+const AdminHome = () => {
   const [people, setPeople] = useState([{}])
   useEffect(() => {
     async function getDetails() {
@@ -16,6 +16,11 @@ const AdminHome = (props) => {
     }
     getDetails()
   }, [])
+
+  const deletePerson = async (id, event) => {
+    event.preventDefault()
+    let res = axios.delete(`${BASE_URL}volunteers/${id}`)
+  }
 
   return (
     <div>
@@ -39,17 +44,6 @@ const AdminHome = (props) => {
         <div className="admin_form">
           <h3 className="subheading">Update a volunteer</h3>
           <UpdateVolunteer />
-          <p className="admin_note">
-            Volunteer ID is hidden: Hover under quote to reveal
-          </p>
-        </div>
-
-        <div className="admin_form">
-          <h3 className="subheading">Delete a volunteer</h3>
-          <DeleteVolunteer />
-          <p className="admin_note">
-            Volunteer ID is hidden: Hover under quote to reveal
-          </p>
         </div>
       </div>
       <div>
@@ -58,12 +52,26 @@ const AdminHome = (props) => {
           <div className="roster_container" key={person.id}>
             <div className="volunteer_roster_item">
               <h3 className="synopsis">Full Name: {person.name}</h3>
+              <br></br>
               <h5 className="synopsis">Current City: {person.city}</h5>
-              <h5 className="synopsis">Headshot URL: {person.headshot}</h5>
+              <br></br>
+              <h5 className="synopsis">
+                Headshot_URL: <br></br> {person.headshot}
+              </h5>
+              <br></br>
               <h5 className="synopsis">Current Role: {person.role}</h5>
-              <h5 className="synopsis">Bio Quote: {person.quote}</h5>
+              <br></br>
+              <h5 className="synopsis">
+                Bio Quote: <br></br> {person.quote}
+              </h5>
+              <br></br>
               <h5 className="synopsis">Database ID: {person._id}</h5>
-              <button className="delete">Delete</button>
+              <button
+                onClick={(event) => deletePerson(person.id, event)}
+                className="delete"
+              >
+                Delete Volunteer
+              </button>
             </div>
           </div>
         ))}
