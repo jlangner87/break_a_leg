@@ -3,8 +3,20 @@ import NewShowForm from '../components/NewShow'
 import UpdateShow from '../components/UpdateShow'
 import UpdateVolunteer from '../components/UpdateVolunteer'
 import DeleteVolunteer from '../components/DeleteVolunteer'
+import axios from 'axios'
+import { BASE_URL } from '../globals'
+import { useState, useEffect } from 'react'
 
-const AdminHome = () => {
+const AdminHome = (props) => {
+  const [people, setPeople] = useState([{}])
+  useEffect(() => {
+    async function getDetails() {
+      let res = await axios.get(`${BASE_URL}volunteers`)
+      setPeople(res.data)
+    }
+    getDetails()
+  }, [])
+
   return (
     <div>
       <h2 className="admin_title">Admin Submission Forms</h2>
@@ -39,6 +51,22 @@ const AdminHome = () => {
             Volunteer ID is hidden: Hover under quote to reveal
           </p>
         </div>
+      </div>
+      <div>
+        <p className="subheading">Full volunteer roster</p>
+        {people.map((person) => (
+          <div className="roster_container" key={person.id}>
+            <div className="volunteer_roster_item">
+              <h3 className="synopsis">Full Name: {person.name}</h3>
+              <h5 className="synopsis">Current City: {person.city}</h5>
+              <h5 className="synopsis">Headshot URL: {person.headshot}</h5>
+              <h5 className="synopsis">Current Role: {person.role}</h5>
+              <h5 className="synopsis">Bio Quote: {person.quote}</h5>
+              <h5 className="synopsis">Database ID: {person._id}</h5>
+              <button className="delete">Delete</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )

@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { useParams } from 'react';
 import axios from 'axios'
 import { BASE_URL } from '../globals';
 
 const DeleteVolunteer = (props) => {
 
   const initialState = {
-    _id: ''
+    id: ''
   }
   const [formState, setFormState] = useState(initialState)
 
@@ -14,9 +13,9 @@ const DeleteVolunteer = (props) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (id, event) => {
     event.preventDefault()
-    let res = await axios.delete(`${BASE_URL}volunteers/id`, formState)
+    let res = await axios.delete(`${BASE_URL}volunteers/${id}`, formState)
     console.log(res)
     setFormState(initialState)
   }
