@@ -70,8 +70,6 @@
 
 #### Put request inserts an empty object with a new object ID.
 
-#### When adding a new object, the server displays a blank page with an error that states .map is not a function.
-
 ---
 
 ### _Credits & Citations_

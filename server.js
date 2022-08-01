@@ -44,7 +44,7 @@ app.get('/shows/:', async (req, res) => {
 
 // UPDATE
 
-app.patch('/shows/:id', async (req, res) => {
+app.put('/shows/:id', async (req, res) => {
   const { ObjectId } = req.params
   const updated = req.body
   await Shows.updateOne({ ObjectId: updated })
@@ -88,7 +88,7 @@ app.put('/volunteers/:id', async (req, res) => {
   const { ObjectId } = req.params
   const updated = req.body
   db.collection('volunteers')
-  await Volunteers.replaceOne({ _id: ObjectId })
+  await Volunteers.updateOne({ _id: ObjectId })
   res.json(updated)
 })
 

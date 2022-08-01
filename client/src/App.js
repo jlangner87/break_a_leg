@@ -11,19 +11,19 @@ import Shows from './pages/Shows'
 import Volunteers from './pages/Volunteers'
 
 const App = () => {
-  const [shows, setShows] = useState({})
+  const [shows, setShows] = useState([{}])
   useEffect(() => {
     async function getDetails() {
-      const res = await axios.get(`${BASE_URL}shows`)
+      let res = await axios.get(`${BASE_URL}shows`)
       setShows(res.data)
     }
     getDetails()
   }, [])
 
-  const [people, setPeople] = useState({})
+  const [people, setPeople] = useState([{}])
   useEffect(() => {
     async function getDetails() {
-      const res = await axios.get(`${BASE_URL}volunteers`)
+      let res = await axios.get(`${BASE_URL}volunteers`)
       setPeople(res.data)
     }
     getDetails()
