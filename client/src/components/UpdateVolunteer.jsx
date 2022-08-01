@@ -11,9 +11,9 @@ const UpdateVolunteer = (props) => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  const handleSubmit = async (id, event) => {
+  const handleSubmit = async (_id, event) => {
     event.preventDefault()
-    let res = await axios.put(`${BASE_URL}volunteers/${id}`, formState)
+    let res = await axios.put(`${BASE_URL}volunteers/${_id}`, formState)
     let updated = res.data
     formState(updated)
     setFormState('')
