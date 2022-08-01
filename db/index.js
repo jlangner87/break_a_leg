@@ -1,20 +1,16 @@
 const mongoose = require('mongoose')
-require('dotenv').config()
-
-let dbUrl =
-  process.env.NODE_ENV === 'production'
-    ? process.env.MONGODB_URI
-    : 'mongodb://127.0.0.1:27017/<database_name>'
 
 mongoose
-  .connect(dbUrl)
+  .connect('mongodb://127.0.0.1:27017/theaterDatabase', {
+    useUnifiedTopology: true,
+    useNewUrlParser: true
+  })
   .then(() => {
-    console.log('Successfully connected to MongoDB!')
+    console.log('Theater Database successfully connected to MongoDB.')
   })
   .catch((e) => {
     console.error('Connection error', e.message)
   })
-mongoose.set('debug', true)
 const db = mongoose.connection
 
 module.exports = db

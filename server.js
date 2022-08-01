@@ -12,7 +12,6 @@ app.use(express.json())
 app.use(cors())
 app.use(logger('dev'))
 app.use(express.static(`${__dirname}/client/build`))
-app.use(express.static(`${__dirname}/client/build`))
 
 db.on('error', console.error.bind(console, 'CONNECTION ERROR :: MONGODB'))
 
@@ -101,10 +100,6 @@ app.delete('/volunteers/:id', (req, res) => {
     .then((result) => {
       res.status(201).json(result)
     })
-})
-
-app.get('/*', (req, res) => {
-  res.sendFile(`${__dirname}/client/build/index.html`)
 })
 
 app.listen(PORT, () => {
