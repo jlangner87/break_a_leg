@@ -16,7 +16,7 @@ app.use(express.static(`${__dirname}/client/build`))
 db.on('error', console.error.bind(console, 'CONNECTION ERROR :: MONGODB'))
 
 app.get('/', (req, res) => {
-  res.json('This is root!')
+  res.json('This is rooooooot!')
 })
 
 //SHOWS OPERATIONS

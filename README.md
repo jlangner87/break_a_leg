@@ -42,6 +42,14 @@
 
 ---
 
+### **_ERD_**
+
+#### ![ERD](./charts/ERD.png)
+
+### **_Component Hierarchy Diagram_**
+
+#### ![Component_Heirarchy_Diagram](./charts/ComponentDiag.png)
+
 ### **_Screenshots_**
 
 #### Home Page
