@@ -2,7 +2,6 @@ import NewVolunteerForm from '../components/NewVolunteer'
 import NewShowForm from '../components/NewShow'
 import UpdateShow from '../components/UpdateShow'
 import UpdateVolunteer from '../components/UpdateVolunteer'
-import DeleteVolunteer from '../components/DeleteVolunteer'
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
@@ -33,9 +32,6 @@ const AdminHome = () => {
         <div className="admin_form">
           <h3 className="subheading">Update a show</h3>
           <UpdateShow />
-          <p className="admin_note">
-            Show ID is hidden: Hover under synopsis to reveal
-          </p>
         </div>
         <div className="admin_form">
           <h3 className="subheading">Add a volunteer</h3>
@@ -72,6 +68,9 @@ const AdminHome = () => {
               >
                 Delete Volunteer
               </button>
+              <p className="admin_note">
+                **deletion is permanent and cannot be undone**
+              </p>
             </div>
           </div>
         ))}

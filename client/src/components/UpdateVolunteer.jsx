@@ -4,25 +4,19 @@ import { BASE_URL } from '../globals';
 
 const UpdateVolunteer = (props) => {
 
-  const initialState = {
-    _id: '',
-    name: '',
-    role: '',
-    city: '',
-    quote: '',
-    headshot: '',
-  }
-  const [formState, setFormState] = useState(initialState)
+
+  const [formState, setFormState] = useState('')
 
   const handleChange = event => {
     setFormState({ ...formState, [event.target.id]: event.target.value })
   }
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (id, event) => {
     event.preventDefault()
-    let res = await axios.put(`${BASE_URL}shows/id`, formState)
-    console.log(res)
-    setFormState(initialState)
+    let res = await axios.put(`${BASE_URL}volunteers/${id}`, formState)
+    let updated = res.data
+    formState(updated)
+    setFormState('')
   }
   return (
     <form onSubmit={handleSubmit} className='form_align'>
