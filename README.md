@@ -8,13 +8,18 @@
 
 ---
 
-| [LinkedIn](https://www.linkedin.com/in/josh-langner-48) | [GitHub](https://github.com/jlangner87) |
+| [LinkedIn](https://www.linkedin.com/in/josh-langner-48) | [GitHub](https://github.com/jlangner87) | [Portfolio](https://joshua-langner.com)
 
 ---
 
-#### Hosted Site [Heroku] (https://enigmatic-wildwood-24371.herokuapp.com/admin)
+#### Hosted Site
+*This project is currently not hosted due to the loss of free hosting services. As on 03/20/2023, I am searching for free or inexpensive hosting options for a MERN stack application*
 
-##### This is deployed with errors.
+To view this application on a localhost:
+- Fork and clone this repository
+- npm install
+- npm start dev
+- npm run start
 
 ---
 
@@ -23,10 +28,6 @@
 #### This application connects community theater-goers to the cast and crew of the current production. Theater admin can easily create, update, and delete show and volunteer profiles for the public to read.
 
 #### The two Mongoose components: Shows & Volunteers
-
-## **_Trello Board_**
-
-#### [Trello](https://trello.com/invite/b/4PqpHSkZ/8c35f8b876eae832e5ee083fb5e78a40/full-stack-mern-application)
 
 ---
 
@@ -63,22 +64,6 @@
 #### Admin Forms Page
 
 #### ![Forms Page](./screenshots/forms.png)
-
----
-
-### **Future Development Opportunity (Post MVP)**
-
-#### Each show will compile a list of volunteers associated with that show. The list will be a clickable link that routes the user to the volunteer's profile
-
-#### Under the display of each volunteer's profile, there will be a compiled biography of every role they have had in any show for the theater using the app. Under that will be a field where users can enter their name and a short message to the volunteer. When they submit it, the message will be displayed on their profile.
-
-#### Shows will be categorized by a "season" key value in the object. The "Shows" page will then be a list of seasons that users can navigate to.
-
-#### The post, update, and delete page for shows and volunteers will be hidden behind an authentication wall, so that the general public cannot alter the data bases.
-
-### **Known Bugs**
-
-#### Put request inserts an empty object with a new object ID.
 
 ---
 
